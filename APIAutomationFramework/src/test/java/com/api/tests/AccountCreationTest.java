@@ -14,12 +14,12 @@ public class AccountCreationTest {
 	public void createAccountTest() {
 		
 		SignUpRequest signUpRequest=new SignUpRequest.Builder()
-		.userName("")
-		.email("@yopmail.com")
-		.firstName("")
-		.password("")
-		.lastName("")
-		.mobileNumber("")
+		.userName("Test123456")
+		.email("testuser1234@yopmail.com")
+		.firstName("test123456")
+		.password("Test12345")
+		.lastName("User123")
+		.mobileNumber("1112223334")
 		.build();
 		
 		

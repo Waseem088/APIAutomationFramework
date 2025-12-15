@@ -18,7 +18,7 @@ public class UpdateProfileTest {
 	public void UpdateProfileTest() {
 
 		AuthService authService = new AuthService();
-		Response response = authService.login(new LoginRequest("uday1234", "uday1234"));
+		Response response = authService.login(new LoginRequest("Test123456", "Test12345"));
 		LoginResponse loginResponse = response.as(LoginResponse.class);
 		System.out.println(response.asPrettyString());
 
@@ -33,10 +33,10 @@ public class UpdateProfileTest {
 		
 		System.out.println("------------------------------------------------------------");
 		ProfileRequest profileRequest = new ProfileRequest.Builder()
-				.firstName("Disha")
-				.lastName("Bhat")
-				.email("disha1234@gmail.com")
-				.mobileNumber("7777777771")
+				.firstName("Test12345")
+				.lastName("User123")
+				.email("testuser1234@yopmail.com")
+				.mobileNumber("1112233344")
 				.build();
 		
 		

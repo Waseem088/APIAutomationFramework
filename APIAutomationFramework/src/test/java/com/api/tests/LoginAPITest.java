@@ -19,7 +19,7 @@ public class LoginAPITest {
 
 	@Test(description = "Verify if Login API is working...")
 	public void loginTest() {
-		LoginRequest loginRequest = new LoginRequest("", "");
+		LoginRequest loginRequest = new LoginRequest("Test2342343242", "Test12345");
 		AuthService authService = new AuthService();
 		Response response = authService.login(loginRequest);
 		LoginResponse loginResponse = response.as(LoginResponse.class);
@@ -30,8 +30,8 @@ public class LoginAPITest {
 		System.out.println(loginResponse.getId());
 
 		Assert.assertTrue(loginResponse.getToken() != null);
-		Assert.assertEquals(loginResponse.getEmail(), "");
-		Assert.assertEquals(loginResponse.getId(), 3);
+		Assert.assertEquals(loginResponse.getEmail(), "testuser123@yopmail.com");
+		Assert.assertEquals(loginResponse.getId(), 3443);
 
 	}
 }

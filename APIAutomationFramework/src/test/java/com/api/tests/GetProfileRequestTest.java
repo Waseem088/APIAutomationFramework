@@ -15,7 +15,7 @@ public class GetProfileRequestTest {
 	@Test
 	public void getProfileInfoTest() {
 		AuthService authService = new AuthService();
-		Response response = authService.login(new LoginRequest("", ""));
+		Response response = authService.login(new LoginRequest("Test2342343242", "Test12345"));
 		LoginResponse loginResponse = response.as(LoginResponse.class);
 		System.out.println(loginResponse.getToken());
 		
@@ -23,8 +23,6 @@ public class GetProfileRequestTest {
 		response =userProfileManagementService.getProfile(loginResponse.getToken());
 		UserProfileResponse userProfileResponse=response.as(UserProfileResponse.class);
 		System.out.println(userProfileResponse.getUsername());
-	
-	
 	
 	}
 }

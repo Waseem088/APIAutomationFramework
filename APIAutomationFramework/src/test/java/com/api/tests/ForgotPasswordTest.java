@@ -15,8 +15,7 @@ public class ForgotPasswordTest {
 		
 		
 		AuthService authService = new AuthService();
-		Response response=authService.forgotPassword("");
+		Response response=authService.forgotPassword("testuser1234@yopmail.com");
 		System.out.println(response.asPrettyString());
-
 	}
 }
