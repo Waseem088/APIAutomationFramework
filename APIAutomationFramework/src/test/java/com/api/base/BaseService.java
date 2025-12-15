@@ -23,6 +23,10 @@ public class BaseService {
 		requestSpecification = given().baseUri(BASE_URL);
 	}
 
+	static {  //intercepting and logging request/response
+		RestAssured.filters(new LoggingFilter());
+	}
+	
 	protected Response postRequest(Object payload, String endpoint) {
 		return requestSpecification.contentType(ContentType.JSON).body(payload).post(endpoint);
 	}
